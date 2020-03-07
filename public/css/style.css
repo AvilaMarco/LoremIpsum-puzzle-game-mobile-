@@ -1,0 +1,371 @@
+*
+{
+	margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+}
+.d-none
+{
+  display: none !important;
+}
+.contenedor
+{
+	width: 100vw;
+	height: 100vh;
+}
+.gridBox
+{
+	width: fit-content;
+	border: solid;
+	display: flex;
+	flex-direction: column;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+.grid-row
+{
+	display: flex;
+}
+.grid-cell
+{
+	border: solid;
+	width: 18vw;
+	height: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-white
+{
+	background: white !important;
+}
+.bg-black
+{
+	background: black !important;
+}
+.bg-lose
+{
+  box-shadow: inset 0px 0px 150px 20px rgba(255, 0, 0, 0.62);
+}
+.bg-win
+{
+  box-shadow: inset 0px 0px 150px 20px rgba(0, 255, 8, 0.62);
+}
+.peon
+{
+	width: 13vw;
+  height: 13vw;
+  position: relative;
+  border-radius: 80px;
+  box-shadow: inset 0px 0px 20px 10px #383838;
+}
+.peon-red
+{
+  background: red;
+}
+.peon-green
+{
+  background: lime;
+}
+.timer
+{
+  width: 50%;
+  height: 25%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10em;
+  transform: translate(50%);
+}
+#pause
+{
+  font-size: 5em;
+    background: inherit;
+    border: 0;
+    width: 150px;
+    height: 120px;
+    position: fixed;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+.btn-level
+{
+  width: 20vw;
+  height: 20vw;
+  font-size: 3em;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 20px 0px 0px #383838;
+  border-radius: 40px;
+  outline: none;
+}
+.box-levels
+{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 46%;
+  left: 50%;
+}
+h1
+{
+  text-align: center;
+  font-size: 8em;
+  position: relative;
+  top: 3vh;
+  word-spacing: 3em;
+}
+#backMenu
+{
+  display: block;
+  margin: auto;
+  position: fixed;
+  bottom: 4vh;
+  left: 13%;
+  font-size: 3em;
+  width: 75%;
+  height: 5%;
+  padding: 15px;
+}
+.btn-menu
+{
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 60%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+.btn
+{
+  width: 100%;
+  box-shadow: 0 20px 0px 0px #383838;
+  height: 10%;
+  font-size: 3em;
+  border-radius: 30px;
+  outline: none;
+}
+.btn-menu .btn
+{
+  height: 16%;
+  font-size: 4em;
+}
+.modal
+{
+  width: 70%;
+    height: 70%;
+    background: black;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 30px;
+    border-radius: 50px;
+}
+.cont-reset
+{
+  position: fixed;
+  font-size: 6em;
+  text-align: center;
+  width: 100%;
+  top: 80vh;
+}
+#close
+{
+  position: fixed;
+  font-size: 10em;
+  width: 17vw;
+  height: 17vw;
+  bottom: 70vh;
+  left: 65vw;
+  background: initial;
+  border: 0;
+}
+#dontMov
+{
+  z-index: 999;
+  position: fixed;
+  width: 90vw;
+  height: 60vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#level
+{
+  font-size: 3em;
+  position: fixed;
+  right: 5vw;
+  top: 1vh;
+  background: inherit;
+  border: 0;
+}
+/*==================================
+=            animations            =
+==================================*/
+.btn-click-down
+{
+  animation: click 0.2s linear;
+  animation-fill-mode: forwards;
+}
+
+.btn-click-up
+{
+
+  animation: click 0.2s linear 0.2s reverse;
+  animation-fill-mode: forwards;
+}
+
+@keyframes click{
+  from{
+    box-shadow: 0 20px 0px 0px #383838;
+    transform: translateY(0);
+  }
+  to{
+    box-shadow: 0 0px 0px 0px #383838;
+    transform: translateY(20px);
+  }
+}
+.animation-mov-left
+{
+	animation: 	movLeft 0.3s linear;
+	animation-fill-mode: forwards;
+}
+@keyframes movLeft{
+	from{
+		left: 0;
+	}
+	to{
+		left: -18vw;
+	}
+}
+.animation-mov-right
+{
+	animation: 	movRight 0.3s linear;
+	animation-fill-mode: forwards;
+}
+@keyframes movRight{
+	from{
+		left: 0;
+	}
+	to{
+		left: 18vw;
+	}
+}
+.animation-mov-bottom
+{
+	animation: 	movbot 0.3s linear;
+	animation-fill-mode: forwards;
+}
+@keyframes movbot{
+	from{
+		top: 0;
+	}
+	to{
+		top: 18vw;
+	}
+}
+.animation-mov-top
+{
+	animation: 	movTop 0.3s linear;
+	animation-fill-mode: forwards;
+}
+@keyframes movTop{
+	from{
+		top: 0;
+	}
+	to{
+		top: -18vw;
+	}
+}
+
+.animation-lose-top{
+	animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) reverse both;
+}
+
+@keyframes slide-in-blurred-top {
+  0% {
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform-origin: 50% 0%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.animation-lose-bottom{
+	animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) reverse both;
+}
+@keyframes slide-in-blurred-bottom {
+  0% {
+    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    transform-origin: 50% 100%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.animation-lose-right{
+	animation: slide-in-blurred-right 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) reverse both;
+}
+
+@keyframes slide-in-blurred-right {
+  0% {
+    transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 0% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.animation-lose-left{
+	animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) reverse both;
+}
+
+@keyframes slide-in-blurred-left {
+  0% {
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+/*=====  End of animations  ======*/

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="user-scalable=no"/>
+	<!-- <meta name="HandheldFriendly" content="true"/> -->
+	<meta name="mobile-web-app-capable" content="yes"/>
+</head>
+<body>
+	<!-- main -->
+	<div id="main" class="contenedor d-none">
+		<button id="pause">||</button>
+		<button id="level"></button>
+		<div class="timer">
+			<p id="min">00</p><p>:</p><p id="seg">00</p>
+		</div>
+		<div class="cont-reset">
+			<span>Cont Restart: </span><span id="cont_restar"></span>
+		</div>
+		<div id="dontMov" class="contenedor d-none">
+			
+		</div>
+	</div>
+
+	<!-- level -->
+	<div id="levels-menu" class="contenedor d-none">
+
+	</div>
+
+	<!-- menu -->
+	<div id="menu" class="contenedor">
+		<h1>Lorem ipsum</h1>
+		<div class="btn-menu">
+			<button class="btn" onclick="clickBtn(this, togglemenuLevels)" id="levels">Levels</button>
+			<button class="btn" onclick="clickBtn(this)">Ladder</button>
+			<button class="btn" onclick="clickBtn(this)">Login</button>
+			<button class="btn" onclick="clickBtn(this)">Info</button>
+		</div>
+	</div>
+
+	<!-- modal -->
+	<div class="modal d-none">
+		<button id="close">X</button>
+		<button class="btn" onclick="clickBtn(this, toMenu)">menu</button>
+		<button class="btn" onclick="clickBtn(this, toggleLevelGame)">levels</button>
+		<button class="btn" onclick="clickBtn(this, reset)">restart</button>
+	</div>
+<!-- scripts -->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+apiKey: "AIzaSyCIhWhQaZHf510HEbEoAhF0Kj__MlOgUmQ",
+authDomain: "space-table.firebaseapp.com",
+databaseURL: "https://space-table.firebaseio.com",
+projectId: "space-table",
+storageBucket: "space-table.appspot.com",
+messagingSenderId: "626764099873",
+appId: "1:626764099873:web:f2cedd16e4b0cda3f00e60"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="js/levels.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
